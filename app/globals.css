@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1400px;
+}
+
+.header {
+  height: auto;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: bisque;
+}
+
+.main-bar {
+  height: auto;
+  display: flex;
+  flex-direction: right;
+  justify-content: space-between;
+  background-color: black;
+}
+.title {
+align-items: left;
+}
+
+.add__button {
+  height: 2rem;
+  width: 5rem;
+  background-color: green;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.save__button {
+  height: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.edit__button {
+  height: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.delete__button {
+  height: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.page {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.create-pad {
+  display: flex;
+  justify-content: center;
+  margin: 25px;
+}
+
+.pads {
+  margin: 25px;
+}
+
+.pad-container {
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.note-pad {
+  padding: 5px;
+  background-color: red;
+  width: 200px;
+  height: auto;
+  min-height: 200px;
+  border-radius: 20px;
+  overflow-wrap: break-word;
+}
+
+.note__input {
+  background-color: beige;
+  color: black;
+  border-radius: 10px;
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  height: auto;
+  word-wrap: break-word;
+}
+.note__input.add-note {
+  width: 200px;
+  height: auto;
+  min-height: 200px;
+
+}
+
+.note__input.readonly {
+  pointer-events: none;
+  background: transparent;
+}
+
+.note__input.editing {
+  border: 1px solid #ccc;
+  background: white;
+}
+
+.button__holder {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  
+
+}
