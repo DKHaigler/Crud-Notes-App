@@ -19,7 +19,7 @@ type Note = {
   isEditing: boolean;
 };
 
-  const [notes, setNotes] = useState<Note>([]);
+  const [notes, setNotes] = useState<Note[]>([]);
   const [pads, setPads] = useState<Pad[]>([]);
   const [inputText,setInputText] = useState("");
   const addNote = () => {
