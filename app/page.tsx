@@ -8,8 +8,19 @@ import { faCircleDown } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function Home() {
-  const [notes, setNotes] = useState([]);
-  const [pads, setPads] = useState([]);
+type Pad = {
+  id: string;
+};
+
+type Note = {
+  id: string;
+  text: string;
+  padId: string;
+  isEditing: boolean;
+};
+
+  const [notes, setNotes] = useState<Note>([]);
+  const [pads, setPads] = useState<Pad[]>([]);
   const [inputText,setInputText] = useState("");
   const addNote = () => {
     if (!inputText.trim()) return;
