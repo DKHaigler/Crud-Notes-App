@@ -45,20 +45,20 @@ type Note = {
     setInputText("")
   }
 
-  const deleteNote = (id) => {
+  const deleteNote = (id: string) => {
     setNotes(prevNotes => prevNotes.filter(note => note.id !== id)) 
     
   }
   
-  const startEditing = (id) => {
+  const startEditing = (id: string) => {
     setNotes(prevNotes => prevNotes.map(note => note.id === id ? {...note, isEditing: true} : note));
   }
 
-  const handleEditChange = (id, newText) => {
+  const handleEditChange = (id: string, newText: string) => {
     setNotes(prevNotes => prevNotes.map(note => note.id === id && note.isEditing ? {...note, text:newText} : note));
   }
 
-  const saveEdit = (id) =>{
+  const saveEdit = (id: string) =>{
     setNotes(prevNotes => prevNotes.map(note => note.id === id ? {...note, isEditing: false} : note));
   }  
   return (
